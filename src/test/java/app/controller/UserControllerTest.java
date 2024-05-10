@@ -137,7 +137,7 @@ public class UserControllerTest {
                 .andExpect(jsonPath("$.data[0].address").value("123 Street"))
                 .andExpect(jsonPath("$.data[0].phoneNumber").value("1234567890"))
                 .andExpect(jsonPath("$.metadata.message")
-                        .value("Users born between" + dateRangeDto.getFromBirthDate()
+                        .value("Users born between " + dateRangeDto.getFromBirthDate()
                                 + " and " + dateRangeDto.getToBirthDate()));
     }
 
@@ -178,7 +178,7 @@ public class UserControllerTest {
                 .andExpect(jsonPath("$.data[1].address").value("456 Avenue"))
                 .andExpect(jsonPath("$.data[1].phoneNumber").value("0987654321"))
                 .andExpect(jsonPath("$.metadata.message")
-                        .value("Users born between" + dateRangeDto.getFromBirthDate() + " and "
+                        .value("Users born between " + dateRangeDto.getFromBirthDate() + " and "
                                 + dateRangeDto.getToBirthDate()));
     }
 
@@ -205,7 +205,7 @@ public class UserControllerTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.data", hasSize(1)))
                 .andExpect(jsonPath("$.metadata.message")
-                        .value("Users born between" + dateRangeDto.getFromBirthDate() + " and "
+                        .value("Users born between " + dateRangeDto.getFromBirthDate() + " and "
                                 + dateRangeDto.getToBirthDate()));
     }
 

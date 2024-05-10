@@ -64,7 +64,7 @@ public class UserController {
                 .collect(Collectors.toList());
 
         DataWrapper<List<UserResponseDto>> listDataWrapper = new DataWrapper<>(transformedList);
-        listDataWrapper.addMetadata("message", "Users born between"
+        listDataWrapper.addMetadata("message", "Users born between "
                 + dateRangeDto.getFromBirthDate() + " and " + dateRangeDto.getToBirthDate());
         return listDataWrapper;
     }

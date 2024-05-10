@@ -20,7 +20,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
-    private static final Map<Long, User> userMap = new HashMap<>();
+    private final Map<Long, User> userMap = new HashMap<>();
     private final UserMapper userMapper;
     private final UserUpdateMapper userUpdateMapper;
     private final AtomicLong userIdCounter = new AtomicLong(1);
